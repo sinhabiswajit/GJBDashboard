@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardFragment">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="REAL TIME PERFORMANCE &amp; MONITORING TOOL BASED DASH BOARDS FOR HOUSE SERVICE CONNECTION (Domestic Connection)"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/blue500"/>
+        <include layout="@layout/dashboard_domestic_con_layout"
+            android:id="@+id/dashboard_domestic"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="REAL TIME PERFORMANCE &amp; MONITORING TOOL BASED DASH BOARDS FOR HOUSE SERVICE CONNECTION (Non Domestic Connection)"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/blue500"/>
+        <include layout="@layout/dashboard_non_domestic_con_layout"
+            android:id="@+id/dashboard_non_domestic"/>
+        <TextView
+            android:id="@+id/label_charts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="DYNAMIC DASHBOARDS FOR PERFORMANCE ANALYSIS AT VARIOUS LEVELS"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@color/blue500"/>
+        <com.anychart.anychart.AnyChartView
+            android:id="@+id/deptWisePieChart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bluegrey200"/>
+        <com.anychart.anychart.AnyChartView
+            android:id="@+id/grievanceAnalysisPieChart"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bluegrey200"/>
+    </LinearLayout>
+</ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        android:src="@drawable/ic_download_24"
+        android:backgroundTint="@color/blue500"
+        app:elevation="6dp"
+        app:layout_anchorGravity="bottom|end" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
